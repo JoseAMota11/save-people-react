@@ -6,9 +6,9 @@
   align-items: center;
   gap: 15px;
   background-color: #fff;
-  padding: 15px;
   border-radius: 14px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
 }
 
 .side-a {
@@ -95,4 +95,11 @@ input {
   font-size: 18px;
   color: #888;
   margin: auto 0;
+}
+
+@media (max-width: 830px) {
+  
+  .card__container {
+    flex-direction: column;
+  }
 }

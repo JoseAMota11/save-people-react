@@ -14,3 +14,13 @@ body {
   display: grid;
   place-content: center;
 }
+
+
+@media (max-width: 830px) {
+  body {
+    padding: 10px 0;
+  }
+  .container {
+    height: 100%;
+  }
+}
