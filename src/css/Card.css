@@ -75,8 +75,9 @@ input {
   width: 100%;
   height: 400px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  justify-content: start;
 }
 
 .person__container {
@@ -87,7 +88,8 @@ input {
   height: 50px;
   border-radius: 6px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 10px;
   margin: 10px 0;
 }
 
@@ -95,6 +97,23 @@ input {
   font-size: 18px;
   color: #888;
   margin: auto 0;
+}
+
+.btn-delete {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  color: #c22
+}
+
+i {
+  pointer-events: none;
 }
 
 @media (max-width: 830px) {

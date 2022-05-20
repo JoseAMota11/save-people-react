@@ -32,6 +32,16 @@ function Card() {
     setPerson({...person, [name]:value})
   }
 
+  const deletePerson = (id) => {
+    const newPeople = people.filter(newPerson => {
+      if (newPerson.id !== id) {
+        return newPerson
+      }
+    })
+    setPeople(newPeople)
+    localStorage.setItem("person", JSON.stringify(newPeople))
+  }
+
   return (
     <div className='card__container'>
       <div className="side-a">
@@ -82,11 +92,12 @@ function Card() {
                   <h3>{item.name} {item.lastname}</h3>
                   <h3>{item.age}</h3>
                   <h3>{item.email}</h3>
+                  <button onClick={() => deletePerson(item.id)} className="btn-delete"><i className="fa-solid fa-user-xmark"></i></button>
                 </div>
               )
             })
             :
-            <h2 className='no-person'>No person added yet!</h2>
+            <h2 className='no-person'>There's no any person added yet!</h2>
           }
         </div>
       </div>
